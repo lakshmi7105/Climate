@@ -1,0 +1,25 @@
+// script.js
+
+// Wait until the page is fully loaded
+document.addEventListener("DOMContentLoaded", () => {
+    console.log("Script loaded successfully!");
+
+    // Example: change heading text when button is clicked
+    const button = document.getElementById("myButton");
+    const heading = document.getElementById("myHeading");
+
+    if (button && heading) {
+        button.addEventListener("click", () => {
+            heading.textContent = "You clicked the button!";
+        });
+    }
+
+    // Example: form submission handling
+    const form = document.getElementById("myForm");
+    if (form) {
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+            alert("Form submitted!");
+        });
+    }
+});
